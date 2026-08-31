@@ -61,7 +61,7 @@ function Navbar() {
 
                 <a href="#features">Features</a>
 
-                <a href="#about">About</a>
+                <a href="#HowItWorks">About</a>
 
                 <a href="#contact">Contact</a>
 

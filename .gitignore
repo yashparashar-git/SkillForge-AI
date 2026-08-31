@@ -20,3 +20,5 @@ Thumbs.db
 
 # npm
 npm-debug.log*
+
+server/uploads/
