@@ -1,0 +1,309 @@
+.interview-navbar{
+
+    width:100%;
+
+    height:90px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 35px;
+
+    background:linear-gradient(160deg,rgba(139,92,246,.07),rgba(255,255,255,.02)) , #0A0712;
+
+    border-bottom:1px solid rgba(139,92,246,.2);
+
+    box-sizing:border-box;
+
+}
+
+/* Left */
+
+.interview-navbar-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+.interview-navbar-logo{
+
+    width:50px;
+
+    height:50px;
+
+    object-fit:contain;
+
+}
+
+.interview-navbar-title{
+
+    color:#F5F3FF;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin:0;
+
+}
+
+.interview-navbar-subtitle{
+
+    color:#9CA3AF;
+
+    margin-top:4px;
+
+    font-size:14px;
+
+}
+
+/* Right */
+
+.interview-navbar-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+/* Buttons */
+
+.interview-download-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:13px 20px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#7C3AED,#2563EB);
+
+    color:white;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s ease;
+
+    box-shadow:0 8px 22px rgba(124,58,237,.3);
+
+    position:relative;
+
+}
+
+.interview-download-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 28px rgba(124,58,237,.4);
+
+}
+
+.interview-btn-icon{
+
+    font-size:16px;
+
+}
+
+.interview-btn-badge{
+
+    background:#DC2626;
+
+    color:white;
+
+    font-size:9px;
+
+    font-weight:700;
+
+    padding:2px 6px;
+
+    border-radius:5px;
+
+    letter-spacing:.3px;
+
+}
+
+/* Student */
+
+.interview-student-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:13px 20px;
+
+    border-radius:12px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.03);
+
+    color:#E5E7EB;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    transition:.25s ease;
+
+}
+
+.interview-student-btn:hover{
+
+    background:rgba(139,92,246,.1);
+
+    border-color:rgba(139,92,246,.3);
+
+}
+
+/* Bell */
+
+.interview-notification-btn{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:rgba(255,255,255,.03);
+
+    color:#FCD34D;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.25s ease;
+
+}
+
+.interview-notification-btn:hover{
+
+    background:rgba(139,92,246,.1);
+
+    border-color:rgba(139,92,246,.3);
+
+}
+
+/* User Card */
+
+.interview-user-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:8px 16px;
+
+    border-radius:16px;
+
+    background:linear-gradient(160deg,rgba(139,92,246,.1),rgba(255,255,255,.02));
+
+    border:1px solid rgba(139,92,246,.25);
+
+}
+
+.interview-user-avatar{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#7C3AED,#2563EB);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:bold;
+
+    flex-shrink:0;
+
+}
+
+.interview-user-card h4{
+
+    color:#F5F3FF;
+
+    margin:0;
+
+    font-size:14px;
+
+}
+
+.interview-user-card span{
+
+    color:#9CA3AF;
+
+    font-size:12px;
+
+}
+
+.interview-user-chevron{
+
+    color:#9CA3AF;
+
+    font-size:12px;
+
+    margin-left:4px;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+    .interview-navbar{
+
+        height:auto;
+
+        flex-direction:column;
+
+        gap:16px;
+
+        padding:20px;
+
+    }
+
+    .interview-navbar-right{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+}

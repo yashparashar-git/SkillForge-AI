@@ -1,0 +1,853 @@
+/* =========================================
+   SKILLFORGE AI DASHBOARD
+   Matched to AI Interview Agent theme
+   Sidebar flattened, robot repositioned
+   ALL CLASSES ARE SCOPED WITH sf-
+   ========================================= */
+
+.sf-dashboard {
+    min-height: 100vh;
+    display: flex;
+    background: #0A0712;
+    color: #f8fafc;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================
+   SIDEBAR (flat, no gradient)
+   ========================================= */
+
+.sf-sidebar {
+    width: 250px;
+    min-height: 100vh;
+
+    background: #0E0B18;
+    border-right: 1px solid rgba(255,255,255,.06);
+
+    padding: 28px 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+
+/* LOGO */
+
+.sf-logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+
+    padding: 0 12px;
+    margin-bottom: 48px;
+
+    background: linear-gradient(90deg, #60A5FA, #3B82F6, #2563EB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+/* NAVIGATION */
+
+.sf-sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+
+.sf-nav-item {
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 0 16px;
+
+    border-radius: 12px;
+
+    color: #9CA3AF;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: all 0.25s ease;
+}
+
+
+.sf-nav-item span {
+    width: 22px;
+    text-align: center;
+    font-size: 16px;
+}
+
+
+.sf-nav-item:hover {
+    background: rgba(255,255,255,.05);
+    color: #ffffff;
+}
+
+
+.sf-nav-active {
+    background: linear-gradient(135deg, #7C3AED, #2563EB);
+    color: #ffffff;
+    box-shadow: 0 8px 20px rgba(124,58,237,.3);
+}
+
+
+.sf-nav-active:hover {
+    background: linear-gradient(135deg, #7C3AED, #2563EB);
+}
+
+
+/* LOGOUT */
+
+.sf-logout-btn {
+    margin-top: auto;
+
+    height: 48px;
+
+    border: 1px solid rgba(220,38,38,.3);
+    border-radius: 12px;
+
+    background: rgba(220,38,38,.12);
+
+    color: #FCA5A5;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    transition: 0.25s;
+}
+
+
+.sf-logout-btn:hover {
+    background: rgba(220,38,38,.85);
+    color: white;
+}
+
+
+/* =========================================
+   MAIN
+   ========================================= */
+
+.sf-main {
+    margin-left: 250px;
+
+    width: calc(100% - 250px);
+
+    min-height: 100vh;
+
+    padding: 30px 34px 50px;
+
+    background: #0A0712;
+}
+
+
+/* =========================================
+   TOPBAR
+   ========================================= */
+
+.sf-topbar {
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+
+.sf-search-wrapper {
+    width: 340px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 12px;
+
+    padding: 0 16px;
+
+    transition: .2s ease;
+}
+
+.sf-search-wrapper:focus-within {
+    border-color: #8B5CF6;
+    box-shadow: 0 0 0 4px rgba(139,92,246,.12);
+}
+
+
+.sf-search-wrapper span {
+    font-size: 18px;
+    color: #6B7280;
+}
+
+
+.sf-search-wrapper input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #E5E7EB;
+
+    font-size: 14px;
+}
+
+
+.sf-search-wrapper input::placeholder {
+    color: #6B7280;
+}
+
+
+/* TOPBAR RIGHT */
+
+.sf-topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+.sf-notification {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    background: rgba(255,255,255,.03);
+
+    border-radius: 50%;
+
+    font-size: 16px;
+    color: #FCD34D;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.sf-notification:hover {
+    background: rgba(139,92,246,.1);
+    border-color: rgba(139,92,246,.3);
+}
+
+
+/* PROFILE */
+
+.sf-profile-mini {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.08);
+    padding: 6px 14px 6px 6px;
+    border-radius: 40px;
+}
+
+
+.sf-avatar {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #7C3AED, #2563EB);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-weight: 700;
+    font-size: 15px;
+}
+
+
+.sf-mini-info {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.2;
+}
+
+
+.sf-mini-info strong {
+    font-size: 14px;
+    color: #f8fafc;
+}
+
+
+.sf-mini-info span {
+    font-size: 11px;
+    color: #9CA3AF;
+
+    margin-top: 2px;
+}
+
+
+/* =========================================
+   WELCOME CARD
+   ========================================= */
+
+.sf-welcome-card {
+    min-height: 140px;
+
+    border-radius: 20px;
+
+    padding: 30px 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(139,92,246,.25);
+
+    position: relative;
+
+    margin-bottom: 24px;
+
+    box-shadow: 0 0 40px rgba(76,29,149,.1);
+}
+
+
+.sf-welcome-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+.sf-welcome-small {
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 1.4px;
+
+    color: #A78BFA;
+}
+
+
+.sf-welcome-card h1 {
+    margin: 7px 0 8px;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    color: #F5F3FF;
+}
+
+
+.sf-welcome-card p {
+    margin: 0;
+
+    font-size: 14px;
+
+    color: #9CA3AF;
+}
+
+
+.sf-welcome-robot {
+    position: relative;
+    z-index: 2;
+
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, rgba(124,58,237,.25), rgba(37,99,235,.18));
+    border: 2px solid rgba(139,92,246,.35);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 42px;
+
+    margin-left: 24px;
+    flex-shrink: 0;
+
+    animation: sfRobotFloat 3s ease-in-out infinite;
+}
+
+
+@keyframes sfRobotFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+}
+
+
+/* =========================================
+   STAT CARDS
+   ========================================= */
+
+.sf-stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 16px;
+
+    margin-bottom: 36px;
+}
+
+
+.sf-stat-card {
+    min-height: 96px;
+
+    background: rgba(255,255,255,.03);
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    transition: 0.25s ease;
+}
+
+
+.sf-stat-card:hover {
+    border-color: rgba(139,92,246,.35);
+}
+
+
+.sf-stat-icon {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 12px;
+
+    background: rgba(139,92,246,.15);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 19px;
+}
+
+
+.sf-stat-card div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+.sf-stat-card span {
+    color: #9CA3AF;
+    font-size: 12px;
+}
+
+
+.sf-stat-card strong {
+    color: #F5F3FF;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   SECTION HEADING
+   ========================================= */
+
+.sf-agents-section {
+    margin-bottom: 32px;
+}
+
+
+.sf-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+
+.sf-section-label {
+    color: #8B5CF6;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 600;
+}
+
+
+.sf-section-heading h2 {
+    margin: 5px 0 0;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    color: #f8fafc;
+}
+
+
+/* =========================================
+   AGENT CARDS
+   ========================================= */
+
+.sf-agent-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+.sf-agent-card {
+    text-decoration: none;
+
+    background: rgba(255,255,255,.03);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    min-height: 180px;
+
+    color: white;
+
+    display: block;
+
+    transition: border-color 0.25s, transform 0.25s;
+}
+
+
+.sf-agent-card:hover {
+    border-color: #8B5CF6;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px -10px rgba(124,58,237,.35);
+}
+
+
+.sf-agent-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 17px;
+}
+
+
+.sf-agent-icon {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 12px;
+
+    background: rgba(139,92,246,.15);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+}
+
+
+.sf-agent-arrow {
+    font-size: 20px;
+
+    color: #A78BFA;
+
+    transition: .2s ease;
+}
+
+.sf-agent-card:hover .sf-agent-arrow {
+    transform: translateX(3px);
+}
+
+
+.sf-agent-card h3 {
+    margin: 0 0 7px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    color: #F5F3FF;
+}
+
+
+.sf-agent-card p {
+    margin: 0;
+
+    max-width: 480px;
+
+    color: #9CA3AF;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+.sf-agent-link {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #A78BFA;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   QUICK ACTIONS
+   ========================================= */
+
+.sf-quick-section h2 {
+    font-size: 18px;
+    font-weight: 600;
+
+    margin-bottom: 16px;
+
+    color: #F5F3FF;
+}
+
+
+.sf-quick-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 16px;
+}
+
+
+.sf-quick-card {
+    background: rgba(255,255,255,.03);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    border-radius: 14px;
+
+    padding: 16px 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    text-decoration: none;
+
+    color: white;
+
+    transition: 0.25s;
+}
+
+
+.sf-quick-card:hover {
+    border-color: rgba(139,92,246,.4);
+    background: rgba(139,92,246,.06);
+}
+
+
+.sf-quick-card > span {
+    font-size: 20px;
+}
+
+
+.sf-quick-card div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+.sf-quick-card strong {
+    font-size: 14px;
+    color: #F5F3FF;
+    font-weight: 500;
+}
+
+
+.sf-quick-card small {
+    color: #9CA3AF;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+    .sf-stats-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .sf-sidebar {
+        position: relative;
+
+        width: 100%;
+        min-height: auto;
+
+        padding: 20px;
+    }
+
+
+    .sf-dashboard {
+        flex-direction: column;
+    }
+
+
+    .sf-sidebar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+    .sf-nav-item {
+        flex: 1;
+        min-width: 130px;
+    }
+
+
+    .sf-logout-btn {
+        margin-top: 20px;
+    }
+
+
+    .sf-main {
+        margin-left: 0;
+
+        width: 100%;
+
+        padding: 22px;
+    }
+
+
+    .sf-agent-grid,
+    .sf-quick-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .sf-topbar {
+        height: auto;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 15px;
+    }
+
+
+    .sf-search-wrapper {
+        width: 100%;
+    }
+
+
+    .sf-topbar-right {
+        justify-content: flex-end;
+    }
+
+
+    .sf-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .sf-welcome-card {
+        padding: 25px;
+
+        min-height: 130px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+
+    .sf-welcome-card h1 {
+        font-size: 22px;
+    }
+
+
+    .sf-welcome-robot {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+        margin-left: 0;
+    }
+
+}

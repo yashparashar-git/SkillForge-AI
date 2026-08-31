@@ -1,0 +1,61 @@
+.footer{
+
+padding:60px;
+
+background:#05030E;
+
+text-align:center;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.footer h2{
+
+font-size:32px;
+
+margin-bottom:15px;
+
+}
+
+.footer p{
+
+color:#999;
+
+margin-bottom:30px;
+
+}
+
+.footer div{
+
+display:flex;
+
+justify-content:center;
+
+gap:30px;
+
+margin-bottom:25px;
+
+}
+
+.footer a{
+
+color:white;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.footer a:hover{
+
+color:#7C3AED;
+
+}
+
+.footer span{
+
+color:#666;
+
+}

@@ -1,0 +1,91 @@
+.navbar{
+
+width:100%;
+
+padding:22px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+z-index:100;
+
+background:rgba(5,1,15,.55);
+
+backdrop-filter:blur(15px);
+
+border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:700;
+
+background:linear-gradient(90deg,#7C3AED,#A855F7,#60A5FA);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+.nav-links{
+
+display:flex;
+
+align-items:center;
+
+gap:35px;
+
+}
+
+.nav-links a{
+
+color:#ddd;
+
+transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+color:white;
+
+}
+
+.nav-links button{
+
+padding:12px 28px;
+
+border:none;
+
+border-radius:40px;
+
+background:linear-gradient(90deg,#7C3AED,#4F46E5);
+
+color:white;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.nav-links button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 0 25px #7C3AED;
+
+}

@@ -1,0 +1,110 @@
+.sf-how-wrap{
+    padding:120px 8%;
+    background:#070114;
+    text-align:center;
+}
+
+.sf-how-tag{
+    color:#A855F7;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+.sf-how-title{
+    font-size:48px;
+    color:white;
+    margin-bottom:70px;
+}
+
+.sf-how-title-glow{
+    background:linear-gradient(90deg,#7C3AED,#60A5FA);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* Cards Container */
+
+.sf-how-list{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+/* Single Card */
+
+.sf-how-item{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:45px 30px;
+    backdrop-filter:blur(15px);
+    transition:0.35s ease;
+}
+
+.sf-how-item:hover{
+    transform:translateY(-10px);
+    border-color:#7C3AED;
+    box-shadow:0 0 35px rgba(124,58,237,.25);
+}
+
+/* Number Circle */
+
+.sf-how-badge{
+    width:75px;
+    height:75px;
+    margin:0 auto 25px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    font-weight:700;
+    color:white;
+    background:linear-gradient(135deg,#7C3AED,#2563EB);
+}
+
+.sf-how-item-title{
+    color:white;
+    font-size:24px;
+    margin-bottom:18px;
+}
+
+.sf-how-item-desc{
+    color:#b8b8b8;
+    font-size:16px;
+    line-height:1.8;
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+.sf-how-list{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.sf-how-wrap{
+    padding:80px 6%;
+}
+
+.sf-how-title{
+    font-size:36px;
+}
+
+.sf-how-list{
+    grid-template-columns:1fr;
+}
+
+.sf-how-item{
+    padding:35px 25px;
+}
+
+}

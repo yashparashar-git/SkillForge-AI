@@ -1,0 +1,427 @@
+/* =========================================================
+   INTERVIEW RIGHT PANEL
+========================================================= */
+
+.interview-right-panel {
+
+    width: 280px;
+    flex: 0 0 280px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+
+/* =========================================================
+   COMMON CARD
+========================================================= */
+
+.interview-right-card {
+
+    width: 100%;
+
+    padding: 16px;
+
+    /* background:
+        linear-gradient(
+            145deg,
+            rgba(124,58,237,.08),
+            rgba(37,99,235,.03)
+        ),
+        #0F172A; */
+
+    background:linear-gradient(
+        160deg,
+        rgba(139,92,246,.08),
+        rgba(255,255,255,.02)
+    ),
+    #0A0712;
+    border: 1px solid rgba(124,58,237,.18);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.25);
+
+}
+
+
+/* CARD HEADING */
+
+.interview-right-card h3 {
+
+    margin: 0 0 14px 0;
+
+    color: #F5F3FF;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   INTERVIEW SETUP
+========================================================= */
+
+.interview-right-card select {
+
+    width: 100%;
+
+    height: 40px;
+
+    margin-bottom: 10px;
+
+    padding: 0 12px;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    outline: none;
+
+    background: #111827;
+
+    color: #E5E7EB;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+}
+
+
+.interview-right-card select:focus {
+
+    border-color: #7C3AED;
+
+}
+
+
+/* START BUTTON */
+
+.interview-start-btn {
+
+    width: 100%;
+
+    height: 42px;
+
+    margin-top: 2px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7C3AED,
+            #2563EB
+        );
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .25s ease;
+
+}
+
+
+.interview-start-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(124,58,237,.30);
+
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.interview-progress-bar {
+
+    width: 100%;
+
+    height: 8px;
+
+    background: #1E293B;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.interview-progress-fill {
+
+    width: 30%;
+
+    height: 100%;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7C3AED,
+            #2563EB
+        );
+
+}
+
+
+.interview-right-card > p {
+
+    margin: 10px 0 0 0;
+
+    color: #94A3B8;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   LIVE SCORE
+========================================================= */
+
+.interview-score-box {
+
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 4px;
+
+    margin-bottom: 16px;
+
+}
+
+
+.interview-score-box h1 {
+
+    margin: 0;
+
+    color: #F5F3FF;
+
+    font-size: 38px;
+
+    line-height: 1;
+
+}
+
+
+.interview-score-box span {
+
+    color: #64748B;
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   MINI SCORE
+========================================================= */
+
+.interview-mini-score {
+
+    margin-bottom: 13px;
+
+}
+
+
+.interview-mini-score:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+.interview-mini-score > span {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #CBD5E1;
+
+    font-size: 12px;
+
+}
+
+
+/* SCORE BAR */
+
+.interview-mini-score > div {
+
+    width: 100%;
+
+    height: 6px;
+
+    background: #1E293B;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+/* qq */
+.interview-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+.interview-mini-score > div > div {
+
+    height: 100%;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #7C3AED,
+            #2563EB
+        );
+
+}
+
+
+/* =========================================================
+   SESSION
+========================================================= */
+
+.interview-right-card p {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #CBD5E1;
+
+    font-size: 13px;
+
+}
+
+
+.interview-right-card p + p {
+
+    margin-top: 10px;
+
+}
+
+
+/* =========================================================
+   BOTTOM BUTTONS
+========================================================= */
+
+.interview-right-buttons {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+}
+
+
+.interview-right-buttons button {
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .25s ease;
+
+}
+
+
+/* RESTART */
+
+.interview-right-buttons .restart {
+
+    background: #1E293B;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+}
+
+
+.interview-right-buttons .restart:hover {
+
+    background: #334155;
+
+}
+
+
+/* EXIT */
+
+.interview-right-buttons .exit {
+
+    background: #7F1D1D;
+
+}
+
+
+.interview-right-buttons .exit:hover {
+
+    background: #991B1B;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1200px) {
+
+    .interview-right-panel {
+
+        width: 100%;
+
+        flex: 1;
+
+    }
+
+}
+
+
+@media(max-width:900px) {
+
+    .interview-right-panel {
+
+        width: 100%;
+
+    }
+
+}
