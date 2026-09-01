@@ -7,7 +7,7 @@ import CTA from "../components/CTA";
 import Contact from "./Contact";
 import Footer from "../components/Footer";
 
-import "../styles/landing.css";
+import "../styles/Landing.css";
 
 function Landing() {
 
