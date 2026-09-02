@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/interview";
+const API_URL = "https://skillforge-ai-backend-mxmw.onrender.com/api/interview";
 
 // GET TOKEN
 const getToken = () => {
@@ -91,7 +91,7 @@ export const getInterviewReport = async (interviewId) => {
     const token = localStorage.getItem("token");
 
     const response = await fetch(
-        `http://localhost:5000/api/interview/report/${interviewId}`,
+        `https://skillforge-ai-backend-mxmw.onrender.com/api/interview/report/${interviewId}`,
         {
             method: "GET",
 
